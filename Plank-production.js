@@ -1,3 +1,9 @@
+//to-do: calculate time using this formulas for each Machine do Calculation(i)=(Machine output(i)/output time(i))/(Machine input(i+1)/Machine time(i+1))
+//basically how it works (english-math-programming speak)
+//then you just apply
+//for each chain for each Machine(z) do Calculation(i)=(Machine output(i)/output time(i))/(Machine input(i+1)/Machine time(i+1))
+
+
 const doc = document
 const Treesinput = doc.getElementById("Trees")
 const sawmill1input = doc.getElementById("Sawmill1")
