@@ -1,0 +1,27 @@
+h2 {
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Comic Sans Ms', 'Comic Sans'
+}
+
+div {
+    text-align: center;
+}
+
+label {
+    text-align: center;
+    font-family: 'Comic Sans Ms', 'Comic Sans';
+}
+
+button {
+    align-self: end;
+}
+
+body {
+    text-align: center;
+    background-color: darkcyan;
+}
+
+h3 {
+    text-align: center;
+}
