@@ -1,3 +1,5 @@
+import {minuteconvert, cyclecalculation} from "funclibs.js"
+
 const doc = document
 const Treesinput = doc.getElementById("Trees")
 const sawmill1input = doc.getElementById("Sawmill1")
@@ -11,26 +13,6 @@ let Firstcycle = null
 let secondcycle = null
 let thirdcycle = null
 let finalresult = null
-
-function minuteconvert(a) {
-    function convertmin(a) {
-        return a / 60
-    }
-
-    if (!convertmin(a) < 1.15) {
-        if (convertmin(a) * 60 > 60) {
-            return convertmin(a).toFixed(2) + " minute"
-        } else {
-            return a + " second"
-        }
-    } else {
-        return 1.15 + " minute"
-    }
-}
-
-function cyclecalculation(a) {
-    return Math.ceil(a / 20.5)
-}
 
 function production(tree, cycle, sawmill1, sawmill2) {
     const log = tree * 2
@@ -62,8 +44,8 @@ function production(tree, cycle, sawmill1, sawmill2) {
         realtime = (woodnum[i] * cycle) / sawmill[i]
         totalcycle.push(cyclecalculation(realtime))
         alltime.push(realtime)
-        time = minuteconvert(realtime)
-        arrcycle[i] = "Time/Cycle : " + time + "/" + cyclecalculation(realtime) + " Cycle | " + wood[i] + " : " + woodnum[i] + " | Total cycles = " + totalcycle.reduce(function (x, y) {return x + y;}, 0)
+        time = minuteconvert(realtime, cycle)
+        arrcycle[i] = "Time/Cycle : " + time + "/" + cyclecalculation(realtime, cycle) + " Cycle | " + wood[i] + " : " + woodnum[i] + " | Total cycles = " + totalcycle.reduce(function (x, y) {return x + y;}, 0)
         console.log(arrcycle[i])
     }
 
